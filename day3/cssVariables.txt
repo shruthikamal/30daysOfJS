@@ -1,0 +1,15 @@
+CSS Variables:
+	They sould be declared on an element.Eg: root->base element
+	
+	:root {
+	/* declaring css variables */
+	--base: #df9d9d;
+	--spacing: 20px;
+	--blur: 10px;
+	}
+	/* using the CSS variables */
+	.img {
+	padding: var(--spacing);
+	background: var(--base);
+	filter: blur(var(--blur));
+	}

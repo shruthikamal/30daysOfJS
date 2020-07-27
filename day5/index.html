@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>
+			js 30 challenge
+		</title>
+		<!--<link rel="stylesheet" type="text/css" href="js30.css" />-->
+	</head>
+	<body class="body">
+		<h2>Fetch from github link</h2>
+
+		<script>
+			const endpoint =
+				"https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json";
+			let cities = [];
+			fetch(endpoint)
+				.then((blob) => blob.json())
+				.then((data) => (cities = data)) // use spread operator here for data like this ...data
+				.then(() => console.log(cities));
+		</script>
+	</body>
+</html>
